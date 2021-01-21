@@ -1,0 +1,67 @@
+Github:
+
+Git is a distributed version-control system for tracking changes in any set of files, 
+originally designed for coordinating work among programmers cooperating on source code during 
+software development. 
+Its goals include speed, data integrity, and support for distributed, non-linear workflows.
+
+------------------------------------------------------------------------------------------------
+
+Git and Github:
+GIt is a distributed version control tool while Github is just a hosting site.
+
+--------------------------------------------------------------------------------------------------
+
+Configuring Git:
+
+setting up user_name:
+git config --global user.name 'Aniket More'
+
+setting up Email:
+git config --global user.email 'moreaniket9@gmail.com'
+
+To see the config:
+git config --list
+
+To see username or email:
+git config user.name
+git congif user.email
+
+----------------------------------------------------------------------------------------------------
+
+Three Stage Architecture of Git:
+
+Git takes a snapshot of the files you commit so if you mess up the later version of that file you
+can revert back to the previous version.
+
+There are three stages of a file in Git:
+
+1> Working directory:
+in working directory you have all the files of your project.
+
+2>Staging area:
+Staging area contains the files you want to commit or take a snapshot of.
+
+3>Git Repo:
+Git repo contains the snapshots of the files oyu have committed.
+You can revert back to any previous version of the file by using the hash code in git log
+that is stored in Git repo.
+
+ ------------------------------------------------------------------------------------------------------
+
+Tracking Our First Git Project:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
