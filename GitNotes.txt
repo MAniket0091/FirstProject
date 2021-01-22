@@ -43,13 +43,97 @@ in working directory you have all the files of your project.
 Staging area contains the files you want to commit or take a snapshot of.
 
 3>Git Repo:
-Git repo contains the snapshots of the files oyu have committed.
+Git repo contains the snapshots of the files you have committed.
 You can revert back to any previous version of the file by using the hash code in git log
 that is stored in Git repo.
 
- ------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
 
 Tracking Our First Git Project:
+
+first check status of git with:
+git status
+
+to make a git repository or repo:
+git init
+
+This will create a hidden .git folder that will store our snapshots.
+check status again.
+
+git status
+
+This will tell us that we have untracked files to track all of the files at once we use:
+git add --a
+
+adding specific files:
+git add Py1.py Py2.py Py3.py
+
+---------------------------------------------------------------------------------------------------------
+
+Taking snapshot or committing files:
+
+git commit -m 'Initial Commit'
+git status
+
+to view out commit history we use:
+git log
+
+------------------------------------------------------------------------------------------------------------
+
+Now let us see what happens when we edit or modify the files:
+
+let us change Py1.py file.
+
+git status
+Now git status will show us we have modified files.
+
+now let us say we want to take snapshot of the modified Py1.py file.
+we do it by :
+git add Py1.py
+git commit -m 'Edited Py1.py and removed headers'
+
+To see the history of changes:
+git log
+
+--------------------------------------------------------------------------------------------------------------------
+
+Cloning a repo from the github:
+
+to clone a repo from github we use:
+git clone 'Url From The Repo'
+
+example: git clone https://github.com/MAniket0091/DataAnalysis.git
+
+to rename the folder we are downloading:
+git clone 'Url From The Repo' NewName
+
+example" git clone https://github.com/MAniket0091/DataAnalysis.git SQL_DA
+
+----------------------------------------------------------------------------------------------------------------------
+
+gitignore:
+
+sometimes we don't want to track a particular file or files.
+We use gitignore to ignore files we don't want to track.
+
+making gitignore file:
+touch .gitignore
+
+Now in .gitignore file we have to input file or folder names to ignore:
+nano .gitignore
+    *.log
+    DataAnalysis/
+
+Check status:
+git status
+
+You will see that git is now ignoring log file and DataAnalysis Folder.
+
+Now commiting the gitignore file:
+git add .gitignore
+git commit .gitignore -m 'Added git ignore file'
+git status
+
 
 
 
