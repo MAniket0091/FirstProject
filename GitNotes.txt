@@ -134,6 +134,26 @@ git add .gitignore
 git commit .gitignore -m 'Added git ignore file'
 git status
 
+--------------------------------------------------------------------------------------------------------------------------------------
+
+git diff:
+
+git diff shows the difference between the same file at working directory and staging are.
+if we modified a file and used the command 'git diff' it shows the lines we added and the lines we
+deleted.
+
+nano Py3.py
+
+--editing Py3.py--
+
+git diff
+
+-------------------------------------------------------------------------------------------------
+
+add all the files in staging area to commit:
+git commit -a -m 'Committing at once'
+
+-----------------------------------------------------------------------------------------------------
 
 
 
