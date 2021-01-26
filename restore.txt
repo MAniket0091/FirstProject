@@ -1,7 +1,0 @@
-this is how you restore a file in git:
-
-
-
-Bam 
-Bam
-Bam
