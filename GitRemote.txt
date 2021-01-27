@@ -1,0 +1,105 @@
+GIT REMOTE:
+
+In Git, the term remote is concerned with the remote repository. It is a shared repository that 
+all team members use to exchange their changes. A remote repository is stored on a code hosting 
+service like an internal server, GitHub, Subversion, and more. In the case of a local repository,
+a remote typically does not provide a file tree of the project's current state; as an alternative,
+it only consists of the .git versioning data.
+
+The developers can perform many operations with the remote server. These operations can be 
+a clone, fetch, push, pull, and more. 
+
+--------------------------------------------------------------------------------------------------------------
+
+Generating and Adding SSH key:
+
+To use 'Git Remote' functions we have to first generate a ssh key for our project and add that
+ssh key to our git account.
+
+generating ssh key:
+
+add the repo to .git:
+git remote add origin https://github.com/MAniket0091/FirstProject.git
+
+generate ssh:
+ssh-keygen -t ed25519 -C "moreaniket9@gmail.com"
+
+adding ssh key to ssh agent:
+ssh-add ~/.ssh/id_ed25519
+
+copy the ssh key:
+clip < ~/.ssh/id_ed25519.pub
+
+the add it to your Github account.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Pushing master branch to github:
+git push -u origin master
+
+-------------------------------------------------------------------------------------------------------
+
+Git Branches:
+
+A branch represents an independent line of development. Branches serve as an abstraction for the 
+edit/stage/commit process. You can think of them as a way to request a brand new working directory,
+staging area, and project history. New commits are recorded in the history for the current branch,
+which results in a fork in the history of the project.
+
+The git branch command lets you create, list, rename, and delete branches. 
+It doesn’t let you switch between branches or put a forked history back together again. 
+For this reason, git branch is tightly integrated with the git checkout and git merge commands.
+
+------------------------------------------------------------------------------------------------------------------
+
+Creating Branches:
+
+assuming you are in master branch which is the default branch.
+
+creating new branch:
+git checkout -b experiment
+
+migrating to that branch:
+git checkout experiment
+
+migrating to master branch:
+git checkout master
+
+---------------------------------------------------------------------------------------------------
+
+Working with Branches:
+
+Branches let us work with different chsges with our project.
+That is if we made changes from 'experiment branch' and we are not happy with them we can revert 
+back to master branch and those changes made to project in 'experiment' branch will be reverted.
+To permanent the changes we made in our branches we merge branches with master branch.
+
+Let us say I delete and edit few files using the experiment branch anf I want to go back to 
+previous master branch version of our project:
+
+git checkout experiment
+-- making some changes--
+reverting back to master:
+git checkout master
+
+listing all the branches:
+git branch
+
+deleting a branch:
+git branch -d/D [BranchName]
+
+-------------------------------------------------------------------------------------------------------------------
+
+merging branches:
+
+You have to be in master branch:
+git merge [BranchName]
+
+already merged branches:
+git branch --merged
+
+branches that have not been merged yet:
+git branch --no-merged
+
+-------------------------------------------------------------------------------------------------------
+
